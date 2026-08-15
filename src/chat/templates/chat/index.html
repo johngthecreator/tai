@@ -1,0 +1,12 @@
+{% extends "chat/base.html" %}
+
+{% block body_block %}
+  {% if message_history%}
+    {% for message in message_history %}
+    <p>{{message.message}} - {{message.role}}</p>
+    {% endfor %}
+  {% else %}
+    <p>No Messages</p>
+  {% endif %}
+{% endblock %}
+
